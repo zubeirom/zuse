@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="sPaneRoot" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.htwsaar.zuse.controller.IndexController">
+   <children>
+      <VBox prefHeight="650.0" prefWidth="1000.0">
+        <children>
+          <MenuBar cacheShape="false" centerShape="false" disable="true" focusTraversable="false" scaleShape="false" visible="false" VBox.vgrow="NEVER">
+            <menus>
+              <Menu mnemonicParsing="false" text="File">
+                <items>
+                  <MenuItem mnemonicParsing="false" text="New" />
+                  <MenuItem mnemonicParsing="false" text="Open…" />
+                  <Menu mnemonicParsing="false" text="Open Recent" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Close" />
+                  <MenuItem mnemonicParsing="false" text="Save" />
+                  <MenuItem mnemonicParsing="false" text="Save As…" />
+                  <MenuItem mnemonicParsing="false" text="Revert" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Preferences…" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Quit" />
+                </items>
+              </Menu>
+              <Menu mnemonicParsing="false" text="Edit">
+                <items>
+                  <MenuItem mnemonicParsing="false" text="Undo" />
+                  <MenuItem mnemonicParsing="false" text="Redo" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Cut" />
+                  <MenuItem mnemonicParsing="false" text="Copy" />
+                  <MenuItem mnemonicParsing="false" text="Paste" />
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Select All" />
+                  <MenuItem mnemonicParsing="false" text="Unselect All" />
+                </items>
+              </Menu>
+              <Menu mnemonicParsing="false" text="Help">
+                <items>
+                  <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+                </items>
+              </Menu>
+            </menus>
+          </MenuBar>
+            <AnchorPane prefHeight="2160.0" prefWidth="3840.0">
+               <children>
+                  <BorderPane prefHeight="2000.0" prefWidth="1920.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <right>
+                        <AnchorPane minWidth="250.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox minWidth="250.0" prefHeight="537.0" prefWidth="250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Separator orientation="VERTICAL" />
+                                    <BorderPane>
+                                       <bottom>
+                                          <AnchorPane BorderPane.alignment="CENTER">
+                                             <children>
+                                                <HBox spacing="5.0">
+                                                   <children>
+                                                      <Button fx:id="btUpdate" cacheShape="false" centerShape="false" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btUpdateClick" pickOnBounds="false" scaleShape="false" text="Update">
+                                                         <padding>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </padding>
+                                                      </Button>
+                                                      <Button fx:id="btDelete" mnemonicParsing="false" onAction="#btDeleteClick" text="Delete" />
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </padding>
+                                                </HBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </bottom>
+                                       <top>
+                                          <AnchorPane BorderPane.alignment="CENTER" />
+                                       </top>
+                                       <center>
+                                          <TabPane fx:id="tabPane" BorderPane.alignment="CENTER">
+                                             <tabs>
+                                                <Tab fx:id="tabCustomer" closable="false" text="Customer">
+                                                   <content>
+                                                      <VBox minHeight="459.0" minWidth="244.0" prefHeight="459.0" prefWidth="244.0">
+                                                         <children>
+                                                            <Label text="Customer ID">
+                                                               <VBox.margin>
+                                                                  <Insets top="5.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="tfCustomerId" disable="true">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" />
+                                                               </VBox.margin>
+                                                            </TextField>
+                                                            <Label text="First Name">
+                                                               <VBox.margin>
+                                                                  <Insets top="5.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="tfCustomerFirstName">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" />
+                                                               </VBox.margin>
+                                                            </TextField>
+                                                            <Label text="Name">
+                                                               <VBox.margin>
+                                                                  <Insets top="5.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="tfCustomerLastName">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" />
+                                                               </VBox.margin>
+                                                            </TextField>
+                                                            <Label text="Company Name" />
+                                                            <TextField fx:id="tfCustomerCompanyName" />
+                                                            <Label text="eMail">
+                                                               <VBox.margin>
+                                                                  <Insets top="5.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="tfCustomerEMail">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" />
+                                                               </VBox.margin>
+                                                            </TextField>
+                                                            <Label text="Phone Number" />
+                                                            <TextField fx:id="tfCustomerPhoneNumber" />
+                                                            <Label text="Address">
+                                                               <VBox.margin>
+                                                                  <Insets top="5.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <TextArea fx:id="tfCustomerAddress" prefHeight="113.0" prefWidth="234.0" style="-fx-border-color: 00000000000;" wrapText="true">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" />
+                                                               </VBox.margin>
+                                                            </TextArea>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </content>
+                                                </Tab>
+                                                <Tab fx:id="tabOrder" closable="false" text="Order">
+                                                   <content>
+                                                      <VBox minHeight="459.0" minWidth="244.0" prefHeight="400.0" prefWidth="250.0" spacing="5.0">
+                                                         <children>
+                                                            <ScrollPane hbarPolicy="NEVER">
+                                                               <content>
+                                                                  <VBox fx:id="vBoxOrderPositions" spacing="5.0" />
+                                                               </content>
+                                                            </ScrollPane>
+                                                            <Button fx:id="btAddOrderPosition" disable="true" mnemonicParsing="false" text="Add Article" />
+                                                            <Separator prefWidth="200.0" />
+                                                            <HBox alignment="CENTER_RIGHT">
+                                                               <children>
+                                                                  <Label fx:id="lbOrderFullPrice" text="Full Price" />
+                                                               </children>
+                                                            </HBox>
+                                                            <ComboBox fx:id="cbOrderCustomer" onAction="#cbNewOrderCustomerChange" prefHeight="25.0" prefWidth="280.0" promptText="Customer (ID)" />
+                                                            <Button fx:id="btSendOrderNext" onAction="#btSendOrderNextClick" mnemonicParsing="false" text="Send to Commission">
+                                                               <VBox.margin>
+                                                                  <Insets top="20.0" />
+                                                               </VBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </content>
+                                                </Tab>
+                                                <Tab fx:id="tabArticle" closable="false" disable="true" text="Article">
+                                                   <content>
+                                                      <VBox minHeight="459.0" minWidth="244.0" prefHeight="459.0" prefWidth="244.0">
+                                                         <children>
+                                                            <Label text="Article ID">
+                                                               <VBox.margin>
+                                                                  <Insets top="5.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="tfArticleId" disable="true">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" />
+                                                               </VBox.margin>
+                                                            </TextField>
+                                                            <Label text="Article Name">
+                                                               <VBox.margin>
+                                                                  <Insets top="5.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="tfArticleName" disable="true">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" />
+                                                               </VBox.margin>
+                                                            </TextField>
+                                                            <Label text="Price in €">
+                                                               <VBox.margin>
+                                                                  <Insets top="5.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="tfArticlePrice" disable="true">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" />
+                                                               </VBox.margin>
+                                                            </TextField>
+                                                            <Label text="Article Stock">
+                                                               <VBox.margin>
+                                                                  <Insets top="5.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <TextField fx:id="tfArticleStock" disable="true">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" />
+                                                               </VBox.margin>
+                                                            </TextField>
+                                                            <Label text="Category" />
+                                                            <ComboBox fx:id="cbArticleCategory" disable="true" prefWidth="150.0" />
+                                                            <Label text="Article Description">
+                                                               <VBox.margin>
+                                                                  <Insets top="5.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <TextArea fx:id="tfArticleDescription" disable="true" prefHeight="157.0" prefWidth="234.0" style="-fx-border-color: 00000000000;" wrapText="true">
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" />
+                                                               </VBox.margin>
+                                                            </TextArea>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </padding>
+                                                      </VBox>
+                                                   </content>
+                                                </Tab>
+                                             </tabs>
+                                          </TabPane>
+                                       </center>
+                                    </BorderPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </right>
+                     <left>
+                        <AnchorPane maxWidth="150.0" minWidth="150.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox minWidth="150.0" prefWidth="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <VBox prefHeight="273.0" prefWidth="142.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <ImageView fitHeight="440.0" fitWidth="143.0"  pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@final_zuse_icon.png" />
+                                                   </image>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </ImageView>
+                                                <Separator />
+                                                <ComboBox fx:id="cbCategories" onAction="#cbCategoriesChange" prefWidth="135.0" promptText="Categories">
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </ComboBox>
+                                                <TextField fx:id="tfNewCategory" onAction="#tfNewCategoryEnter" promptText="New Category">
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </TextField>
+                                                <Button fx:id="btNewCategory" mnemonicParsing="false" onAction="#btNewCategoryClick" text="Add" />
+                                                <Group id="orderGroup">
+                                                   <children>
+                                                      <VBox>
+                                                         <children>
+                                                            <RadioButton fx:id="rbIncoming" mnemonicParsing="false" text="Incoming">
+                                                               <toggleGroup>
+                                                                  <ToggleGroup fx:id="orderGroup" />
+                                                               </toggleGroup>
+                                                            </RadioButton>
+                                                            <RadioButton fx:id="rbCommission" mnemonicParsing="false" text="Commission" toggleGroup="$orderGroup" />
+                                                            <RadioButton fx:id="rbOutgoing" mnemonicParsing="false" text="Outgoing" toggleGroup="$orderGroup" />
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="20.0" />
+                                                   </VBox.margin>
+                                                </Group>
+                                                <ToggleButton mnemonicParsing="false" text="Show disabled">
+                                                   <VBox.margin>
+                                                      <Insets top="20.0" />
+                                                   </VBox.margin>
+                                                </ToggleButton>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                    <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </left>
+                     <center>
+                        <AnchorPane BorderPane.alignment="CENTER">
+                           <children>
+                              <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <bottom>
+                                    <AnchorPane maxHeight="40.0" minWidth="40.0" prefHeight="40.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <HBox alignment="CENTER" spacing="10.0">
+                                             <children>
+                                                <Button fx:id="btUpdateWarehouse" alignment="TOP_RIGHT" minHeight="10.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#btUpdateWarehouseClick" text="Rename current warehouse">
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </padding>
+                                                </Button>
+                                                <Button fx:id="btDeleteWarehouse" mnemonicParsing="false" onAction="#btDeleteWarehouseClick" text="Delete current warehouse">
+                                                   <padding>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </padding>
+                                                </Button>
+                                                <Label fx:id="lbErrors" textFill="RED" />
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </bottom>
+                                 <center>
+                                    <AnchorPane BorderPane.alignment="CENTER">
+                                       <children>
+                                          <ScrollPane fitToWidth="true" hbarPolicy="NEVER" hmax="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <content>
+                                                <TilePane fx:id="tpButtons" prefTileHeight="150.0" prefTileWidth="150.0">
+                                                   <children>
+                                                      <Button fx:id="btAddArticle" contentDisplay="TOP" maxHeight="140.0" maxWidth="140.0" minHeight="140.0" minWidth="140.0" mnemonicParsing="false" onAction="#btAddArticleClick" text="+" textAlignment="CENTER" wrapText="true">
+                                                         <font>
+                                                            <Font size="48.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                </TilePane>
+                                             </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </center>
+                     <top>
+                        <AnchorPane maxHeight="80.0" minHeight="100.0" prefHeight="80.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <VBox prefHeight="80.0" prefWidth="1050.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox fx:id="hBoxWarehouse" minHeight="90.0" prefHeight="80.0" prefWidth="1050.0" spacing="5.0">
+                                       <children>
+                                          <ScrollPane fx:id="spWarehouse" hbarPolicy="ALWAYS" prefHeight="80.0" prefWidth="4000.0" vbarPolicy="NEVER">
+                                             <content>
+                                                <Group>
+                                                   <children>
+                                                      <HBox fx:id="hBoxWarehouseInSP" prefHeight="70.0" spacing="5.0">
+                                                         <padding>
+                                                            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                         </padding>
+                                                         <children>
+                                                            <Button fx:id="btAddWarehouse1" maxHeight="70.0" maxWidth="70.0" minHeight="70.0" minWidth="70.0" mnemonicParsing="false" onAction="#btAddWarehouseClick" text="+">
+                                                               <font>
+                                                                  <Font size="24.0" />
+                                                               </font>
+                                                            </Button>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </Group>
+                                             </content>
+                                          </ScrollPane>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <Separator prefWidth="200.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </top>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+        </children>
+      </VBox>
+   </children>
+</StackPane>

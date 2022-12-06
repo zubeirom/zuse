@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.htwsaar.zuse.controller.CreateCustomerController">
+   <children>
+      <VBox layoutX="10.0" layoutY="10.0" prefHeight="415.0" prefWidth="254.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="First Name">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="tfNewCustomerFirstName">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Last Name">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="tfNewCustomerName">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Company Name" />
+            <TextField fx:id="tfNewCustomerCompanyName" />
+            <Label text="eMail">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="tfNewCustomerEMail">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Phone Number" />
+            <TextField fx:id="tfNewCustomerPhoneNumer" />
+            <Label text="Address:">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <VBox minWidth="65.0">
+                     <children>
+                        <Label prefHeight="25.0" text="Street" />
+                        <Label prefHeight="25.0" text="Postal Code" />
+                        <Label prefHeight="25.0" text="City" />
+                        <Label prefHeight="25.0" text="Country" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <TextField fx:id="tfNewCustomerAddressStreet" prefWidth="1000.0" />
+                        <TextField fx:id="tfNewCustomerAddressPostalCode" prefWidth="1000.0" />
+                        <TextField fx:id="tfNewCustomerAddressCity" prefWidth="1000.0" />
+                        <TextField fx:id="tfNewCustomerAddressCountry" prefWidth="1000.0" />
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <children>
+                  <Button fx:id="btConfirmCustomerCreate" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#btConfirmCustomerCreateClick" text="Confirm" />
+                  <Button fx:id="btCancelCustomerCreate" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#btCancelCustomerCreateClick" text="Cancel" />
+                  <Label fx:id="lbCreateCustomerErrors" textFill="RED" />
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

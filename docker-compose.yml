@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+
+  mysql:
+    container_name: zuse-mysql-instance
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'zuseDB'
+      MYSQL_ROOT_PASSWORD: 'admin'
+      MYSQL_ROOT_HOST: '%'
+    ports:
+      - '3306:3306'
+    volumes:
+      - zamanDB:/var/lib/mysql
+
+
+# Where we store our data
+volumes:
+  zamanDB:
+
+

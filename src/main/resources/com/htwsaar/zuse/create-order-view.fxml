@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="459.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.htwsaar.zuse.controller.CreateOrderController">
+   <children>
+      <VBox layoutX="10.0" layoutY="10.0" minHeight="459.0" minWidth="244.0" prefHeight="400.0" prefWidth="250.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ScrollPane fx:id="spNewOrderPositions" hbarPolicy="NEVER" prefHeight="280.0" prefWidth="290.0">
+               <content>
+                  <VBox fx:id="vBoxNewOrderPositions" spacing="5.0" />
+               </content>
+            </ScrollPane>
+            <Button fx:id="btNewOrderAddOrderPosition" disable="true" mnemonicParsing="false" onAction="#btNewOrderAddOrderPositionClick" text="Add Article" />
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER_RIGHT">
+               <children>
+                  <Label fx:id="lbNewOrderFullPrice" text="Full Price" />
+               </children>
+            </HBox>
+            <ComboBox fx:id="cbNewOrderCustomer" onAction="#cbNewOrderCustomerChange" prefWidth="150.0" promptText="Customer (ID)" />
+            <HBox spacing="10.0">
+               <children>
+                  <Button fx:id="btConfirmOrderCreate" disable="true" minWidth="60.0" mnemonicParsing="false" onAction="#btConfirmOrderCreateClick" text="Confirm" />
+                  <Button fx:id="btCancelOrderCreate" minWidth="50.0" mnemonicParsing="false" onAction="#btCancelOrderCreateClick" text="Cancel" />
+                  <Label fx:id="lbCreateOrderErrors" textFill="RED" wrapText="true" />
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

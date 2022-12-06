@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="280.0" spacing="10.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.htwsaar.zuse.controller.NameController">
+   <children>
+      <Label text="Name new warehouse:" />
+      <TextField fx:id="tfWarehouseName" onAction="#tfWarehouseNameEnter" text="" />
+      <HBox alignment="TOP_RIGHT" prefHeight="130.0" prefWidth="394.0" spacing="5.0">
+         <children>
+            <Button fx:id="btConfirmWarehouseCreation" mnemonicParsing="false" onAction="#btConfirmWarehouseCreationClick" text="Confirm" />
+            <Button fx:id="btCancelWarehouseCreation" cancelButton="true" mnemonicParsing="false" onAction="#btCancelWarehouseCreationClick" text="Cancel" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>
