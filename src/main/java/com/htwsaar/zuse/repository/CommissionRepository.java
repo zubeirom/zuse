@@ -3,11 +3,11 @@ package com.htwsaar.zuse.repository;
 import com.htwsaar.zuse.model.Commission;
 import com.htwsaar.zuse.util.JPAUtil;
 import com.htwsaar.zuse.util.Util;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
 
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityTransaction;
 /**
  * Interface to connect the DB with the Java objects and save the data or delete it.
  * Manage the DB access and guarantees the persistence of the data when new data are added to the

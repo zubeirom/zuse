@@ -2,9 +2,8 @@ package com.htwsaar.zuse.model;
 
 import com.htwsaar.zuse.util.Util;
 import org.hibernate.annotations.CreationTimestamp;
-
-import javax.persistence.*;
 import java.sql.Timestamp;
+import jakarta.persistence.*;
 
 
 /**

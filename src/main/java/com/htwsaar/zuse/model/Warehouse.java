@@ -3,9 +3,9 @@ package com.htwsaar.zuse.model;
 import com.htwsaar.zuse.util.Util;
 import org.hibernate.annotations.CreationTimestamp;
 
-import javax.persistence.*;
 import java.sql.Timestamp;
 import java.time.Instant;
+import jakarta.persistence.*;
 
 /**
  * Class to save a warehouse

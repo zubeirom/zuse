@@ -7,20 +7,16 @@ module com.htwsaar.zuse {
 
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
-    requires validatorfx;
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
-    requires eu.hansolo.tilesfx;
-    requires java.persistence;
-    requires org.hibernate.commons.annotations;
     requires org.hibernate.orm.core;
     requires java.sql;
-    requires mysql.connector.java;
-    requires java.xml.bind;
     requires org.mapstruct.processor;
     requires java.naming;
     requires java.xml;
     requires javafx.graphics;
+    requires javax.persistence;
+    requires jakarta.persistence;
 
 
     opens com.htwsaar.zuse to javafx.fxml;

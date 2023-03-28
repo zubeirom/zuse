@@ -6,9 +6,8 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
-import javax.persistence.*;
-import java.math.BigDecimal;
 import java.sql.Timestamp;
+import jakarta.persistence.*;
 
 /**
  * A class to save informations about an article like name, category, price, quantity etc.

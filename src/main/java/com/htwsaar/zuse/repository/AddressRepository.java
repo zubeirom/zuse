@@ -3,9 +3,9 @@ package com.htwsaar.zuse.repository;
 import com.htwsaar.zuse.model.Address;
 import com.htwsaar.zuse.util.JPAUtil;
 import com.htwsaar.zuse.util.Util;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityTransaction;
 import java.util.List;
 
 /**
